@@ -1,6 +1,9 @@
-site_name: My Docs
+site_name: MeetMate
+repo_url: "https://github.com/Informatik-Projekt-Kurs/documentation"
+repo_name: MeetMate/documentation
 theme:
   name: material
+  logo: assets/logo.png
   features:
     - navigation.tabs
     - navigation.sections
@@ -39,4 +42,4 @@ markdown_extensions:
   - attr_list
 
 copyright: |
-  &copy; 2023 <a href="https://github.com/Informatik-Projekt-Kurs"  target="_blank" rel="noopener">MeetMate</a>
+  &copy; 2024 <a href="https://github.com/Informatik-Projekt-Kurs"  target="_blank" rel="noopener">MeetMate</a>
