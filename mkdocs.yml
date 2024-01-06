@@ -4,28 +4,39 @@ repo_name: MeetMate/documentation
 theme:
   name: material
   logo: assets/logo.png
+  language: en
   features:
     - navigation.tabs
     - navigation.sections
-    - toc.integrate
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
     - navigation.top
+    - navigation.path
+    - navigation.footer
+    - navigation.indexes
+    - header.autohide
+    - toc.integrate
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-  language: en
+    - announce.dismiss
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-      primary: blue
     - scheme: slate
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-night
         name: Switch to light mode
-      primary: blue
+      primary: light blue
+      accent: indigo
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+      primary: light blue
+      accent: indigo
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -40,6 +51,36 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
   &copy; 2024 <a href="https://github.com/Informatik-Projekt-Kurs"  target="_blank" rel="noopener">MeetMate</a>
+extra:
+  analytics:
+    provider: google
+    property: G-03S0LQ52J8
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          note: >-
+            Thanks for your feedback! Help us improve this page by
+            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+plugins:
+  - search
+  - mkdocs-nav-weight:
+      section_renamed: false
+      index_weight: -10
+      warning: true
+      reverse: false
+      headless_included: false
