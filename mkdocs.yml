@@ -4,6 +4,7 @@ repo_name: MeetMate/documentation
 theme:
   name: material
   logo: assets/logo.png
+  language: en
   features:
     - navigation.tabs
     - navigation.sections
@@ -12,26 +13,30 @@ theme:
     - navigation.instant.progress
     - navigation.tracking
     - navigation.top
-    - navigation.sections
     - navigation.path
+    - navigation.footer
+    - navigation.indexes
+    - header.autohide
     - toc.integrate
     - search.suggest
     - search.highlight
     - content.tabs.link
     - content.code.annotation
     - content.code.copy
-  language: en
+    - announce.dismiss
   palette:
-    - scheme: default
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-      primary: blue
     - scheme: slate
       toggle:
-        icon: material/toggle-switch
+        icon: material/weather-night
         name: Switch to light mode
-      primary: blue
+      primary: light blue
+      accent: indigo
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+      primary: light blue
+      accent: indigo
 
 markdown_extensions:
   - pymdownx.highlight:
@@ -46,6 +51,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.mark
   - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 copyright: |
   &copy; 2024 <a href="https://github.com/Informatik-Projekt-Kurs"  target="_blank" rel="noopener">MeetMate</a>
@@ -67,3 +75,12 @@ extra:
           note: >-
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+plugins:
+  - search
+  - mkdocs-nav-weight:
+      section_renamed: false
+      index_weight: -10
+      warning: true
+      reverse: false
+      headless_included: false
