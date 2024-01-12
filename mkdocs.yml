@@ -26,9 +26,6 @@ theme:
     - announce.dismiss
   palette:
     - scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode
       primary: light blue
       accent: indigo
 
