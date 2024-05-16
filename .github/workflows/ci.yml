@@ -32,7 +32,7 @@ jobs:
       - run: npm install -g netlify-cli
       
       # Deploy to Netlify
-      - run: netlify deploy --prod --dir=site --auth=nfp_3d82T93bqf7wVk1py7Bj5NtJbRGWtymf84e4 --site=ad347ef6-f997-4885-8782-2a05cdd0a306
+      - run: netlify deploy --prod --dir=site --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID
         env:
-          NETLIFY_AUTH_TOKEN: nfp_3d82T93bqf7wVk1py7Bj5NtJbRGWtymf84e4
-          NETLIFY_SITE_ID: ad347ef6-f997-4885-8782-2a05cdd0a306
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
