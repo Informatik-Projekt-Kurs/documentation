@@ -11,14 +11,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
+      
       - uses: actions/cache@v2
         with:
           key: ${{ github.ref }}
           path: .cache
+      
       - run: pip install mkdocs-material
       - run: pip install mkdocs-nav-weight
       - run: pip install pillow cairosvg
-      - run: mkdocs gh-deploy --force
+
+      # Build the site
+      - run: mkdocs build
+      
+      # Install Netlify CLI
+      - run: npm install -g netlify-cli
+      
+      # Deploy to Netlify
+      - run: netlify deploy --prod --dir=site --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
