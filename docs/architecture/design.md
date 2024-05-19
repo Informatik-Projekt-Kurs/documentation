@@ -1,6 +1,6 @@
 # **Design Architecture**
 
-### **Design Principles and Tools**
+### **Design Software and Tools**
 
 - **UI/UX Design Guidelines:** Following best practices in design to ensure a user-friendly experience.
 - **Figma:** Utilizing advanced design tools for creating high-fidelity prototypes and designs.
