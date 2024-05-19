@@ -13,7 +13,7 @@ MeetMate supports credential-based authentication. During registration, users pr
 
 **Example registration process:**
 
-```typescript jsx
+```typescript
 // --- Frontend (NextJS Server Component) --- //
 const handleRegistration = async (name, email, password) => {
     // [... validate input fields ...]
@@ -129,7 +129,7 @@ When accessing a protected route or page, the application sends a request to the
 
 **Example authorization middleware and role-based rendering:**
 
-```typescript jsx
+```jsx
 // Frontend (NextJS Page Component)
 const AdminDashboard = () => {
     const [userRole, setUserRole] = useState("");
