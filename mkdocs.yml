@@ -85,4 +85,5 @@ nav:
         - Frontend: architecture/frontend.md
         - Backend: architecture/backend.md
         - Design: architecture/design.md
-    - Authentication: authentication.md
+    - Features:
+      - Authentication: authentication.md
