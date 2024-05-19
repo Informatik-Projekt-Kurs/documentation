@@ -75,3 +75,14 @@ plugins:
       warning: true
       reverse: false
       headless_included: false
+
+nav:
+    - Home:
+        - Start: index.md
+        - Introduction: introduction.md
+    - Architecture:
+        - Overview: architecture/overview.md
+        - Frontend: architecture/frontend.md
+        - Backend: architecture/backend.md
+        - Design: architecture/design.md
+    - Authentication: authentication.md
