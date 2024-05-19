@@ -163,20 +163,25 @@ MeetMate implements industry-standard password hashing techniques to securely st
 
 ### Rate Limiting
 
-To mitigate brute-force attacks and excessive failed login attempts, the backend incorporates rate-limiting mechanisms using the spring boot rate limiting library. This helps prevent unauthorized access and potential security breaches by limiting the number of requests from a specific IP address or user within a certain time frame.
+To mitigate brute-force attacks and excessive failed login attempts, the backend incorporates rate-limiting mechanisms using a completely custom-made system. This helps to prevent unauthorized access and potential security breaches by limiting the number of requests from a specific IP address or user within a certain time frame.
 
 **Example rate-limiting implementation:**
 
 ```java
-private final LinkedList<Long> requests = new LinkedList<>();
-private final int maxRequests = 500;
-private final long refreshTime = 1000; // 1 second
+private final HashMap<String, LinkedList<Long>> requests = new HashMap<>();
+private final int maxRequests = 5;
+private final long refreshTime = 1000 * 10; // 10 seconds
 
 @Override
 protected void doFilterInternal(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response, @NotNull FilterChain filterChain) throws ServletException, IOException {
-    requests.addLast(System.currentTimeMillis());
+    String ip = request.getRemoteAddr();
 
-    if (requests.size() > maxRequests) {
+    if (requests.containsKey(ip))
+        requests.get(ip).addLast(System.currentTimeMillis());
+    else
+        requests.put(ip, new LinkedList<Long>(Collections.singleton(System.currentTimeMillis())));
+
+    if (requests.get(ip).size() > maxRequests) {
         response.setStatus(429);
         response.getWriter().write("Too many requests");
         return;
