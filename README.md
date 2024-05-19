@@ -1,5 +1,5 @@
 # MeetMate Documentation
 
-This is the documentation repository that is automatically deployed to this url: https://informatik-projekt-kurs.github.io/documentation/
+This is the documentation repository that is automatically deployed to this url: https://documentation.meetmate.dev
 
-@InckcrafterTV will be working here mostly
+Everyone will be working here
