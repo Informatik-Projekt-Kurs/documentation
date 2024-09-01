@@ -7,9 +7,9 @@ MeetMate implements a robust and secure authentication and authorization system 
 
 ## Authentication
 
-### User Registration and Login
+### Huoc
 
-MeetMate supports credential-based authentication. During registration, users provide their name, email, and password on the signup page. Upon successful registration, their information is securely stored in a PostgreSQL database, with passwords hashed using a secure hashing algorithm from the spring boot security library.
+MeetMatee e credential-based authentication. During registration, users provide their name, email, and password on the signup page. Upon successful registration, their information is securely stored in a PostgreSQL database, with passwords hashed using a secure hashing algorithm from the spring boot security library.
 
 **Example registration process:**
 
