@@ -4,7 +4,7 @@
 
 ### **About MeetMate**
 
-MeetMate is an innovative web application designed to transform the way small business owners manage clients and appointments. Streamlining administrative tasks and enhancing operational efficiency, MeetMate is more than just software – it's a tool to liberate entrepreneurs from the everyday hassles of business management.
+MeetMate is an innovative web application designed to transform the way small business owners manage clients and appointments. Streamlining administrative tasks and enhancing operational efficiency, MeetMate is more than just software – it's a tool to liberate entrepreneurs from the everyday hassles of business management. Come and try it out!
 
 ### **Quick Links**
 
