@@ -19,12 +19,12 @@ It is more than just software: <br>
 
 - **[Introduction](introduction)**: Discover the vision, mission, and values behind MeetMate.                             
 Understand our commitment to empowering small businesses.
-- **[Architecture](architecture)**: Explore the technical foundation of our application.
-- **[Features](features)**: Learn about the powerful tools at your fingertips.
-- **[Development](development)**: Understand our development process and technologies.
-- **[User Interface](user-interface)**: Get familiar with MeetMate's intuitive design.
-- **[Deployment](deployment)**: Learn how MeetMate is deployed and maintained.
-- **[Legal Compliance](legal-compliance)**: Review our commitment to data protection and privacy.
+- **[Architecture](architecture/overview)**: Explore the technical foundation of our application.
+- **[Features](authentication)**: Learn about the powerful tools at your fingertips.
+- **[Development](development/setup)**: Understand our development process and technologies.
+- **[Deployment](deployment/overview)**: Learn how MeetMate is deployed and maintained.
+- **[User Interface](user-interface/overview)**: Get familiar with MeetMate's intuitive design.
+- **[Legal Compliance](legal-compliance/overview)**: Review our commitment to data protection and privacy.
 
 ### **Latest Updates**
 
