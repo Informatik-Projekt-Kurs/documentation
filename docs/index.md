@@ -12,7 +12,6 @@ By **automating** and **optimizing** administrative tasks,              <br>**Me
 
 MeetMate is an innovative web application designed to transform the way small business owners manage clients and appointments.<br>
 It is more than just software: <br>
-- **it's a tool to liberate entrepreneurs from the everyday hassles of business management**                                                   
 
 **Come and try it out!**
 
