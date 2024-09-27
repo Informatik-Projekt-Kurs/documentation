@@ -1,6 +1,6 @@
 site_name: MeetMate
-repo_url: "https://github.com/Informatik-Projekt-Kurs/documentation"
-repo_name: MeetMate/documentation
+repo_url: "https://github.com/Informatik-Projekt-Kurs"
+repo_name: MeetMate GitHub
 theme:
   name: material
   logo: assets/logo.png
