@@ -2,10 +2,12 @@
 
 ### **Server and Database Management**
 
-- **Spring Boot:** Lorem ipsum dolor sit amet
-- **PostgreSQL:** Lorem ipsum dolor sit amet et spiritus et salve
+- **Spring Boot:** A robust Java framework for building scalable, production-ready backend applications with ease and efficiency.  
+- **PostgreSQL:** A powerful relational database system ensuring reliable and secure data storage and management.  
+- **GraphQL:** A query language and runtime for APIs, enabling flexible and efficient data fetching.  
+- **Docker-Compose:** Simplifies the deployment and management of multi-container applications, ensuring consistent environments across development and production.  
 
 ### **API and Services**
 
-- **RESTful APIs:** Lorem ipsum dolor sit amet
-- **Microservices Architecture:** Lorem ipsum dolor sit amet
+- **RESTful APIs:** Enables communication between systems using a stateless, standardized architecture.  
+- **Microservices Architecture:** Facilitates modular and scalable application development by breaking down functionalities into independent services.  
