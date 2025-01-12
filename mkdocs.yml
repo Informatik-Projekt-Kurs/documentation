@@ -81,40 +81,40 @@ nav:
     - Start: index.md
     - Introduction: introduction.md
 
-  - Architecture: architecture/
-      - Project: project.md
-      - Frontend: frontend.md
-      - Backend: backend.md
-      - Design: design.md
+  - Architecture: 
+      - Project: architecture/project.md
+      - Frontend: architecture/frontend.md
+      - Backend: architecture/backend.md
+      - Design: architecture/design.md
 
-  - Development: development/
-    - Structure: structure/
-      - Frontend: frontend.md
-      - Backend: backend.md
-      - Design: design.md
-    - Development principles: development-principles/
-      - Frontend: frontend.md
-      - Backend: backend.md
-      - Design: design.md
+  - Development: 
+    - Structure: 
+      - Frontend: development/structure/frontend.md
+      - Backend: development/structure/backend.md
+      - Design: development/structure/design.md
+    - Development principles: 
+      - Frontend: development/development-principles/frontend.md
+      - Backend: development/development-principles/backend.md
+      - Design: development/development-principles/design.md
 
-  - Features: features/
-    - Core Elements: core-elements.md 
-    - Authentication: authentication.md
-    - Security: security.md
-    - Quality Assurance: quality-assurance.md
+  - Features: 
+    - Core Elements: features/core-elements.md 
+    - Authentication: features/authentication.md
+    - Security: features/security.md
+    - Quality Assurance: features/quality-assurance.md
 
-  - Deployment: deployment/
-    - Services: services/
-      - Frontend: frontend.md
-      - Backend: backend.md
-    - Structure: structure/
-      - Frontend: frontend.md
-      - Backend: backend.md
+  - Deployment: 
+    - Services: 
+      - Frontend: deployment/services/frontend.md
+      - Backend: deployment/services/backend.md
+    - Structure: 
+      - Frontend: deployment/structure/frontend.md
+      - Backend: deployment/structure/backend.md
 
 
-  - Legal Compliance: legal-compliance/
-      - Overview: overview.md
-      - Privacy Policy: privacy-policy.md
-      - Terms of Service: terms-of-service.md
+  - Legal Compliance: 
+      - Overview: legal-compliance/overview.md
+      - Privacy Policy: legal-compliance/privacy-policy.md
+      - Terms of Service: legal-compliance/terms-of-service.md
     
   - Future Enhancements: future-enhancements/
