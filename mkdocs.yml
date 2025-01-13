@@ -77,35 +77,44 @@ plugins:
       headless_included: false
 
 nav:
-    - Home:
-        - Start: index.md
-        - Introduction: introduction.md
-    - Architecture:
-        - Overview: architecture/overview.md
-        - Frontend: architecture/frontend.md
-        - Backend: architecture/backend.md
-        - Design: architecture/design.md
-    - Features:
-      - Authentication: authentication.md
-    - Development:
-        - Setup: development/setup.md
-        - Frontend:
-            - Dashboard: development/frontend/dashboard.md
-            - Profile: development/frontend/profile.md
-            - Meetings: development/frontend/meetings.md
-            - Settings: development/frontend/settings.md
-        - Backend: development/backend.md
-        - Testing: development/testing.md
-    - Deployment:
-        - Overview: deployment/overview.md
-        - Frontend: deployment/frontend.md
-        - Backend: deployment/backend.md
-    - User Interface:
-        - Overview: user-interface/overview.md
-        - Design Principles: user-interface/design-principles.md
-        - Components: user-interface/components.md
-        - Accessibility: user-interface/accessibility.md
-    - Legal Compliance:
-        - Overview: legal-compliance/overview.md
-        - Privacy Policy: legal-compliance/privacy-policy.md
-        - Terms of Service: legal-compliance/terms-of-service.md
+  - Home:
+    - Start: index.md
+    - Introduction: introduction.md
+
+  - Architecture: 
+      - Project: architecture/project.md
+      - Frontend: architecture/frontend.md
+      - Backend: architecture/backend.md
+      - Design: architecture/design.md
+
+  - Development: 
+    - Structure: 
+      - Frontend: development/structure/frontend.md
+      - Backend: development/structure/backend.md
+      - Design: development/structure/design.md
+    - Development principles: 
+      - Frontend: development/development-principles/frontend.md
+      - Backend: development/development-principles/backend.md
+      - Design: development/development-principles/design.md
+
+  - Features: 
+    - Core Elements: features/core-elements.md 
+    - Authentication: features/authentication.md
+    - Security: features/security.md
+    - Quality Assurance: features/quality-assurance.md
+
+  - Deployment: 
+    - Services: 
+      - Frontend: deployment/services/frontend.md
+      - Backend: deployment/services/backend.md
+    - Structure: 
+      - Frontend: deployment/structure/frontend.md
+      - Backend: deployment/structure/backend.md
+
+
+  - Legal Compliance: 
+      - Overview: legal-compliance/overview.md
+      - Privacy Policy: legal-compliance/privacy-policy.md
+      - Terms of Service: legal-compliance/terms-of-service.md
+    
+  - Future Enhancements: future-enhancements/
