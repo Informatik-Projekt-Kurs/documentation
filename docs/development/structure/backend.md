@@ -74,7 +74,7 @@ Every part of the backend is split into multiple parts. The most noticeable elem
     ```
 
 - **Repository:** <br>
-    These classes are primarily managed by Spring Boot and serve as the bridge between the API and the database layer. These operate in a way that allows you to define method names as though writing queries directly. Spring interprets these methods automatically,  making database interactions both clear and straightforward. Since all the interpretation is done by Spring itself these classes are often among the the smallest and most concise. 
+    These classes are primarily managed by Spring Boot and serve as the bridge between the API and the database layer. These operate in a way that allows you to define method names as though writing queries directly. Spring interprets these methods automatically, making database interactions both clear and straightforward. Since all the interpretation is done by Spring itself these classes are often among the the smallest and most concise. 
     ```java
     @Repository
     public interface CompanyRepository extends MongoRepository<Company, Long> {
