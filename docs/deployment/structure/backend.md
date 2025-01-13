@@ -94,7 +94,7 @@ volumes:
 ```
 
 ## **Building The API**
-blablabla
+Since the backend is based on a Java framework it requires compilation into a .jar file before deployment. To simplify the more complex setup process of the API, this is extracted into a dedicated Dockerfile. The Dockerfile handles all necessary configurations, including dependencies, build steps, and environment setup, before starting the application. This helps with more readability and easier maintainability. 
 
 ```docker
 # Build the application
@@ -115,3 +115,12 @@ COPY --from=builder /app/target/MeetMate.jar /app/MeetMate.jar
 USER appuser
 CMD ["java", "-jar", "MeetMate.jar"]
 ```
+
+Starting the container is now as easy as referencing this setup file.
+
+ˋˋˋ yaml
+meet-mate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+ˋˋˋ
