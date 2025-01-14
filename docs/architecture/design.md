@@ -6,7 +6,6 @@
 - **shadcn:** A customizable component library designed to simplify the creation of modern, accessible, and consistent user interfaces.
 - **Preline UI:** An open-source UI component library, offering pre-designed, customizable components to streamline web design.
 
-
 ### **Benefits**
 
 **Figma:**
