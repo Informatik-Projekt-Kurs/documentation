@@ -117,4 +117,5 @@ nav:
       - Terms of Service: legal-compliance/terms-of-service.md
     
   - Future Enhancements: 
-    - Company Members: future-enhancements
+    - Company Members: future-enhancements.md
+    - Email Verification: email-verification.md

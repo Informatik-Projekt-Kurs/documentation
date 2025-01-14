@@ -8,7 +8,7 @@ In developing the UI/UX for Meetmate, we follow core design principles to create
 2. **Hierarchy**: In our designs we want Information and elements be ordered in a way that helps guiding users' attention effectively.
 3. **Simplicity**: We use clean and simple designs that make it easier for users to use Meetmate.
 4. **Feedback**: The designs should tell the user what to do, which makes it easier for people to use and feel confident.
-****a****
+
 ## Design Standards
 Our design standards encompass a comprehensive set of guidelines that ensure consistency, usability, and visual appeal across all platforms:
 
@@ -31,5 +31,8 @@ The interface is designed to work with different screen sizes and orientations. 
 
 ## Collaborative Design Process
 
-- **Iterative Design:** Embracing an iterative process for continuous improvement based on user feedback and testing.
-- **Cross-Functional Collaboration:** Ensuring designers and developers work in sync to achieve the best possible user experience.
+### Iterative Design 
+By embracing an iterative design process, we focus on continuous improvement driven by feedback and testing. This approach encourages constant evaluation and adaptation, ensuring that the product evolves in response to user behavior and preferences. Rather than striving for a perfect final version from the start, iterative design allows us to release smaller updates, test new ideas, and make decisions, ultimately resulting in a more effective product.
+
+### Cross-Functional Collaboration
+Ensuring designers and developers work in sync is crucial to achieving the best possible user experience. By fostering strong collaboration between these two teams, we can align design concepts with technical feasibility, ensuring that designs are not only visually appealing but also practical and functional. Regular communication, shared tools, and clear guidelines help bridge the gap between design and development, enabling both teams to work seamlessly toward a unified vision. This collaboration ensures that the final product meets user needs, functions smoothly, and maintains a high standard of quality, ultimately leading to a more efficient workflow and a better user experience.
