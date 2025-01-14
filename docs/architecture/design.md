@@ -2,10 +2,19 @@
 
 ### **Design Software and Tools**
 
-- **UI/UX Design Guidelines:** Following best practices in design to ensure a user-friendly experience.
-- **Figma:** Utilizing advanced design tools for creating high-fidelity prototypes and designs.
+- **Figma:** Utilizing advanced design tools for creating detailed prototypes and designs.
+- **shadcn:** A customizable component library designed to simplify the creation of modern, accessible, and consistent user interfaces.
+- **Preline UI:** An open-source UI component library, offering pre-designed, customizable components to streamline web design.
 
-### **Collaborative Design Process**
 
-- **Iterative Design:** Embracing an iterative process for continuous improvement based on user feedback and testing.
-- **Cross-Functional Collaboration:** Ensuring designers and developers work in sync to achieve the best possible user experience.
+### **Benefits**
+
+**Figma:**
+Figma is our main design tool. Its collaborative features and powerful design capabilities let us create, iterate, and improve our designs quickly. With real-time collaboration, team members can work together seamlessly, making edits, sharing feedback, and ensuring alignment without versioning conflicts. Figma also supports developers in translating designs into accurate web implementations by providing precise details about dimensions, colors, and spacing, overcomming the hassle of guessing the right proportions. 
+
+**shadcn:** 
+Shadcn components help maintain a consistent design across all platforms, ensuring a cohesive user experience. These pre-built, customizable components can be easily tailored to meet specific design needs, offering flexibility without starting from scratch. By providing a solid foundation, shadcn reduces the time spent on repetitive initial designs, allowing teams to focus on customizing and enhancing the user interface.
+
+## Preline UI: Layout Inspiration
+
+For layout inspiration, we look to Preline UI. This helps us structure our pages and components in ways that look good and functionally effective.
