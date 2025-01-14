@@ -15,6 +15,5 @@ Figma is our main design tool. Its collaborative features and powerful design ca
 **shadcn:** 
 Shadcn components help maintain a consistent design across all platforms, ensuring a cohesive user experience. These pre-built, customizable components can be easily tailored to meet specific design needs, offering flexibility without starting from scratch. By providing a solid foundation, shadcn reduces the time spent on repetitive initial designs, allowing teams to focus on customizing and enhancing the user interface.
 
-## Preline UI: Layout Inspiration
-
-For layout inspiration, we look to Preline UI. This helps us structure our pages and components in ways that look good and functionally effective.
+**Preline UI:**
+For layout inspiration, we look to Preline UI. This helps structure pages and components in ways that are both visually appealing and functionally effective. Preline UI offers a variety of well-designed layouts that can serve as a starting point for creating intuitive and aesthetically pleasing user interfaces. By drawing from these layouts, we can ensure that our designs are cohesive, easy to navigate, and aligned with best practices in modern web design, providing a strong foundation for customization and creativity in the final product.
