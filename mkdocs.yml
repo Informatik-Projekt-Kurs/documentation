@@ -111,10 +111,11 @@ nav:
       - Frontend: deployment/structure/frontend.md
       - Backend: deployment/structure/backend.md
 
-
   - Legal Compliance: 
       - Overview: legal-compliance/overview.md
       - Privacy Policy: legal-compliance/privacy-policy.md
       - Terms of Service: legal-compliance/terms-of-service.md
     
-  - Future Enhancements: future-enhancements/
+  - Future Enhancements: 
+    - Company Members: future-enhancements.md
+    - Email Verification: email-verification.md
