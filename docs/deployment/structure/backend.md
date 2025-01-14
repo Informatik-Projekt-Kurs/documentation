@@ -118,9 +118,9 @@ CMD ["java", "-jar", "MeetMate.jar"]
 
 Starting the container is now as easy as referencing this setup file.
 
-ˋˋˋ yaml
+```yaml
 meet-mate:
     build:
       context: .
       dockerfile: Dockerfile
-ˋˋˋ
+```

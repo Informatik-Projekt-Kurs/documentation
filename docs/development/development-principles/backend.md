@@ -94,12 +94,22 @@ The occuring responses would then look like this to the user:
 
 - Success:
 ```json
-get cool code
+{
+  "id": 12,
+  "name": "user",
+  "created_at": "1970-01-01",
+  "email": "user@mail.com",
+  "role": "CLIENT",
+}
 ```
 
 - Error:
 ```json
-get bad code
+HTTP/1.1 404 Not Found
+Date: Thu, 01 Jan 1970 00:00:00 GMT
+//[...]
+
+message: User not found!
 ```
 
 <!-- since controllers catch errors. service hat es einfach mit just use a throwable if something is wrong-->
