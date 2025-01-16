@@ -1,7 +1,3 @@
----
-weight: 3
----
-
 # User Authentication & Authorization
 MeetMate implements a robust and secure authentication and authorization system to ensure the protection of user data and control access to various application features and resources.
 
@@ -155,52 +151,6 @@ const AdminDashboard = () => {
 };
 ```
 
-## Security Measures
-
-### Password Hashing
-
-MeetMate implements industry-standard password hashing techniques to securely store user passwords in the database. This ensures that even in the event of a data breach, the actual passwords remain protected, and only the hashed values are stored.
-
-### Rate Limiting
-
-To mitigate brute-force attacks and excessive failed login attempts, the backend incorporates rate-limiting mechanisms using a completely custom-made system. This helps to prevent unauthorized access and potential security breaches by limiting the number of requests from a specific IP address or user within a certain time frame.
-
-**Example rate-limiting implementation:**
-
-```java
-private final HashMap<String, LinkedList<Long>> requests = new HashMap<>();
-private final int maxRequests = 5;
-private final long refreshTime = 1000 * 10; // 10 seconds
-
-@Override
-protected void doFilterInternal(@NotNull HttpServletRequest request, @NotNull HttpServletResponse response, @NotNull FilterChain filterChain) throws ServletException, IOException {
-    String ip = request.getRemoteAddr();
-
-    if (requests.containsKey(ip))
-        requests.get(ip).addLast(System.currentTimeMillis());
-    else
-        requests.put(ip, new LinkedList<Long>(Collections.singleton(System.currentTimeMillis())));
-
-    if (requests.get(ip).size() > maxRequests) {
-        response.setStatus(429);
-        response.getWriter().write("Too many requests");
-        return;
-    }
-
-    filterChain.doFilter(request, response);
-}
-```
-
-### Error Handling
+### Error Handling /// This could be its own "feature" bit i dont know if its worth it because our error handling isnt that great
 
 The frontend application has a robust error handling system in place to prevent unnecessary requests and provide appropriate feedback to users in case of authentication or authorization errors. This may involve displaying user-friendly error messages, redirecting to appropriate pages, or implementing retry mechanisms.
-
-### Session Termination
-
-When a user logs out of the application, the JWT tokens stored as HttpOnly cookies on the client-side are deleted, effectively terminating the user's session. This can be achieved by simply removing the cookies from the client-side storage.
-
-## Future Enhancements
-
-MeetMate plans to introduce additional authentication methods, such as social logins (e.g., Google, GitHub), to provide users with a faster and more convenient signup process. This feature will be implemented while maintaining the highest standards of security and data protection.
-
-Additionally, MeetMate may consider implementing advanced security features like two-factor authentication (2FA) for enhanced security and user verification.
