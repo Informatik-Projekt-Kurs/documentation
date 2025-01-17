@@ -1,6 +1,6 @@
 # **Backend Architecture**
 
-### **Tools**
+### **Framework and Languages**
 - **Spring Boot:** A robust Java framework for building scalable, production-ready backend applications with ease and efficiency.  
 - **PostgreSQL:** A powerful relational database system ensuring reliable and secure data storage and management.  
 - **RESTful APIs:** Enables seamless communication between systems using a stateless, standardized architecture.  
