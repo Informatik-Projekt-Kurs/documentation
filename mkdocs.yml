@@ -81,17 +81,17 @@ nav:
 
   - Architecture: 
       - Project: architecture/project.md
-      - Frontend: architecture/frontend.md
+      - Frontend: architecture/frontend.md.md
       - Backend: architecture/backend.md
       - Design: architecture/design.md
 
   - Development: 
     - Structure: 
-      - Frontend: development/structure/frontend.md
+      - Frontend: development/structure/frontend.md.md
       - Backend: development/structure/backend.md
       - Design: development/structure/design.md
     - Development principles: 
-      - Frontend: development/development-principles/frontend.md
+      - Frontend: development/development-principles/frontend.md.md
       - Backend: development/development-principles/backend.md
       - Design: development/development-principles/design.md
 
@@ -101,13 +101,9 @@ nav:
     - Security: features/security.md
     - Performance: features/performance.md
 
-  - Deployment: 
-    - Services: 
-      - Frontend: deployment/services/frontend.md
-      - Backend: deployment/services/backend.md
-    - Structure: 
-      - Frontend: deployment/structure/frontend.md
-      - Backend: deployment/structure/backend.md
+  - Deployment:
+    - Frontend: deployment/frontend.md
+    - Backend: deployment/backend.md
     
   - Future Enhancements: 
     - Company Enhancements: future-enhancements/company-enhancements.md

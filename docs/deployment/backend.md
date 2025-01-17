@@ -1,7 +1,13 @@
-# Backend Deployment Structure
+# Backend Deployment
 
-## **Managing Four Containers**
-With Docker Compose, all the services required for the backend can be managed in a single, unified file. This makes it easy to configure and deploy the entire backend stack. Docker Compose also ensures proper communication between services through the use of networks, allowing containers to seamlessly interact with each other. 
+## Docker
+The backend of MeetMate uses Docker to have an easy-to-use application that works consistently regardless of the host. By containerizing the application and its dependencies, Docker ensures that MeetMate can run in any environment — whether on a local machine, in a development server, or on production — without configuration inconsistencies. Docker simplifies scalability, allowing for quick adaptation to varying workloads by spinning up additional containers as needed. With Docker, MeetMate benefits from faster setup times, reliable deployments, and the ability to maintain a consistent environment across all stages of development and deployment.
+
+## Docker-Compose
+In harmony with Docker MeetMate also uses Docker-Compose to streamline the deployment process. Docker-Compose not only deploys the API but also simultaneously hosts the necessary databases and manages the development interfaces. By defining all container configurations in a single YAML file, Docker Compose makes it easier to manage the entire backend infrastructure. This unified approach allows for seamless coordination between containers, ensuring they work flawlessly together. Additionally, having everything in one place simplifies maintenance and ensures that the development and production environments remain consistent.
+
+## Managing Four Containers
+With Docker Compose, all the services required for the backend can be managed in a single, unified file. This makes it easy to configure and deploy the entire backend stack. Docker Compose also ensures proper communication between services through the use of networks, allowing containers to seamlessly interact with each other.
 
 ```yaml
 services: 
@@ -93,8 +99,8 @@ volumes:
   data: {}
 ```
 
-## **Building The API**
-Since the backend is based on a Java framework it requires compilation into a .jar file before deployment. To simplify the more complex setup process of the API, this is extracted into a dedicated Dockerfile. The Dockerfile handles all necessary configurations, including dependencies, build steps, and environment setup, before starting the application. This helps with more readability and easier maintainability. 
+## Building The API
+Since the backend is based on a Java framework it requires compilation into a .jar file before deployment. To simplify the more complex setup process of the API, this is extracted into a dedicated Dockerfile. The Dockerfile handles all necessary configurations, including dependencies, build steps, and environment setup, before starting the application. This helps with more readability and easier maintainability.
 
 ```docker
 # Build the application
