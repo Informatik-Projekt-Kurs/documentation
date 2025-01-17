@@ -1,4 +1,4 @@
-# **Backend Architecture**
+# Backend Architecture
 
 ### **Framework and Languages**
 - **Spring Boot:** A robust Java framework for building scalable, production-ready backend applications with ease and efficiency.  

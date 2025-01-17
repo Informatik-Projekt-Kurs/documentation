@@ -1,4 +1,4 @@
-# Overview
+# Architecture Overview
 
 This section delves into the architectural framework of MeetMate, outlining the key components and technologies that drive our application. It outlines the key components and technologies that drive our application. 
 
@@ -21,10 +21,18 @@ The integration between Jira and GitHub allows us to link issues and commits by 
 - **Confluence:** Confluence helps us serve as our primary documentation and knowledge base.
 We use Confluence to save data-structures, integration of frontend and backend, general data of our project, and collect ideas for future features. 
 
+- **Discord:** Discord serves as our primary communication hub, structured with specialized channels for different aspects of the project:
+    - **INFO channels:** Includes welcome information, announcements, progress updates, and resources for quick reference
+    - **TEAMS channels:** Dedicated spaces for general discussion, development topics, product planning, and improvements
+    - **Automated Notifications:** A specialized GitHub notifications channel that automatically receives updates about pull requests, code reviews, and other repository activities
+    - **VOICE channels:** Separate voice channels for different team meetings (Dev, Product) to facilitate real-time discussions and collaboration <br/>
+  
+    > This structure ensures clear communication paths and keeps all team members informed about project updates and developments.
+
 
 ### **Development and Deployment Infrastructure**
 
 - **Cloud Services:** Utilizing cloud platforms for hosting, data storage, and scalability.
 - **CI/CD Pipeline:** Continuous integration and continuous deployment practices for streamlined and efficient release cycles.
 
-**Note**: This structure provides a comprehensive overview of the application architecture, detailing the tools, technologies, and methodologies used in the development of MeetMate. It's designed to be informative for both technical and non-technical users, ensuring a clear understanding of the application's infrastructure.
+> **Note**: This structure provides a comprehensive overview of the application architecture, detailing the tools, technologies, and methodologies used in the development of MeetMate. It's designed to be informative for both technical and non-technical users, ensuring a clear understanding of the application's infrastructure.
