@@ -29,3 +29,13 @@ The company member section includes getting information on specific or all membe
 
 #### Challenges and Next Steps
 The existing backend system is functional but needs better synchronization with the frontend and refinements to match real-world use cases. Completing the frontend integration and resolving discrepancies between initial designs and backend implementations will help finalize this feature, making it fully usable and user-friendly.
+
+
+## Company Default Settings
+To reduce the repetitive tasks companies face on a daily basis, we explored ways to leverage the computational power of our system to automate these processes. This would involve the automatic creation of standard appointments with pre-set times, titles, and locations based on configurable default settings. By setting up these routine actions, we can free up valuable time for employees to focus on more complex and meaningful tasks, while ensuring consistency and reducing the risk of human error.
+
+## Company Browser
+Another feature we envisioned for the future was a browsing page for companies, allowing clients to easily discover businesses that meet their needs and are located nearby. Clients could apply filters such as business type and location to refine their search. To support this, we would need to implement a new system using GraphQL called multi-query pagination. This would break down the queries into smaller, more manageable subsets, reducing the load on the backend API and improving overall performance. However, this feature has not been added yet due to the complexities involved in integrating multi-query pagination, both in the backend queries and designing a functional browsing page for the frontend.
+
+## Conclusion
+While we had many exciting plans for implementing additional features, prioritizing a functional and stable application is crucial. In a professional context, it’s important to focus on strengthening core functionalities before introducing smaller, less essential features. By ensuring that the foundation is solid, we can create a more reliable user experience and avoid unnecessary complications down the line. As a platform continues to grow, continually revisiting these ideas helps implement them at the right time, ensuring a balance of innovation with stability.
