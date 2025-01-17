@@ -101,7 +101,7 @@ nav:
     - Core Elements: features/core-elements.md 
     - Authentication: features/authentication.md
     - Security: features/security.md
-    - Quality Assurance: features/quality-assurance.md
+    - Performance: features/performance.md
 
   - Deployment: 
     - Services: 
