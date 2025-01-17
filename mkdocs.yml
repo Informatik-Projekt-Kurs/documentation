@@ -93,7 +93,7 @@ nav:
       - Backend: development/structure/backend.md
       - Design: development/structure/design.md
     - Development principles: 
-      - Frontend: development/development-principles/frontend.md.md
+      - Frontend: development/development-principles/frontend.md
       - Backend: development/development-principles/backend.md
       - Design: development/development-principles/design.md
 
