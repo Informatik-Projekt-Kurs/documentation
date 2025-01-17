@@ -77,3 +77,100 @@ MeetMate employs industry-standard password hashing techniques to securely store
 ## Session Termination /// Dis not finished
 
 When a user logs out of the application, the JWT tokens stored as HttpOnly cookies on the client-side are deleted, effectively terminating the user's session. This can be achieved by simply removing the cookies from the client-side storage.
+
+## Token Management and Token Security
+
+### HttpOnly Cookies
+In the frontend, we implement secure token storage using HttpOnly cookies, which provides protection against XSS attacks by making tokens inaccessible to JavaScript:
+
+```ts
+export async function storeToken(request: StoreTokenRequest) {
+  cookies().set({
+    name: "accessToken",
+    value: request.access_token,
+    httpOnly: true,
+    sameSite: "strict",
+    secure: true,
+    expires: new Date(Date.now() + Number(request.expires_at))
+  });
+
+  if (request.refresh_token) {
+    cookies().set({
+      name: "refreshToken",
+      value: request.refresh_token,
+      httpOnly: true,
+      sameSite: "strict",
+      secure: true,
+      expires: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000) // 30 days
+    });
+  }
+}
+```
+
+This implementation includes several security features:
+
+- `httpOnly`: Prevents JavaScript access to cookies, mitigating XSS attacks
+- `sameSite: "strict"`: Mitigates CSRF attacks
+- `secure: true`: Ensures cookies are only sent over HTTPS, protecting against network-based attacks
+- Appropriate expiration times for different token types, ensuring tokens are not stored indefinitely thus reducing the risk of token theft
+
+### Role-Based Route Protection
+The application implements role-based access control (RBAC) through Next.js middleware, which was also previously mentioned in the Authentication Chapter. RBAC ensures users can only access routes appropriate for their role:
+
+```ts
+export async function middleware(req: NextRequest) {
+  let user = await getUser(req.cookies.get("accessToken")?.value);
+  let response = NextResponse.next();
+
+  // Token refresh logic for expired sessions
+  if (user === null) {
+    const refreshToken = req.cookies.get("refreshToken")?.value;
+    if (refreshToken) {
+      const newAccessToken = await refreshAccessToken(refreshToken);
+      if (newAccessToken) {
+        // Update tokens and verify user
+        user = await getUser(newAccessToken[0]);
+      } else {
+        return NextResponse.redirect(new URL("/login", req.url));
+      }
+    }
+  }
+
+  // Role-based route protection
+  if (req.nextUrl.pathname.startsWith("/dashboard") && 
+      !["CLIENT", "ADMIN"].includes(user.role)) {
+    response = NextResponse.redirect(new URL("/company/dashboard", req.url));
+  } else if (
+    req.nextUrl.pathname.startsWith("/company/dashboard") &&
+    !["COMPANY_MEMBER", "COMPANY_OWNER"].includes(user.role)
+  ) {
+    response = NextResponse.redirect(new URL("/dashboard", req.url));
+  }
+
+  return response;
+}
+```
+
+This middleware provides several security benefits:
+
+- Automatic token refresh handling
+- Role-based access control
+- Protection against unauthorized route access
+- Seamless redirection for unauthorized users
+
+## Session Termination
+When a user logs out of the application, all authentication tokens are securely removed using the deleteToken function:
+
+```ts
+export async function deleteToken() {
+  cookies().delete("accessToken");
+  cookies().delete("refreshToken");
+  cookies().delete("expires_at");
+}
+```
+
+This ensures:
+
+- Complete removal of all authentication tokens
+- Immediate session termination
+- Prevention of token reuse

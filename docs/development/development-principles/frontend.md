@@ -191,7 +191,7 @@ TypeScript is used throughout the application to ensure type safety and improve 
 ### Type Definitions
 - **Base Types and Unions:** <br>
   Complex types are built using composition and union types for flexibility:
-    ```typescript
+    ```ts
     // Base type that all users share
     type BaseUser = {
       id: number;
@@ -215,7 +215,7 @@ TypeScript is used throughout the application to ensure type safety and improve 
 ### Type Guards
 - **Runtime Type Checking:** <br>
   Type guard functions enable safe type narrowing:
-    ```typescript
+    ```ts
     export function isClientUser(user: User): user is ClientUser {
       return user.role === Role.CLIENT;
     }
@@ -231,7 +231,7 @@ TypeScript is used throughout the application to ensure type safety and improve 
 ### Generic Type Utilities
 - **Advanced Type Patterns:** <br>
   Using TypeScript's type system for flexible, reusable types:
-    ```typescript
+    ```ts
     // Helper type to extract specific user types
     export type UserOfRole<T extends Role> = Extract<User, { role: T }>;
 
@@ -252,7 +252,7 @@ TypeScript is used throughout the application to ensure type safety and improve 
 ### Domain Models
 - **Rich Domain Types:** <br>
   Business entities are modeled with comprehensive type definitions:
-    ```typescript
+    ```ts
     export type Company = {
       id: string;
       name: string;
