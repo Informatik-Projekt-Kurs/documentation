@@ -71,7 +71,7 @@ public ResponseEntity<?> registerNewUser(@RequestParam MultiValueMap<String, Str
 For login, users navigate to the login page and enter their email and password credentials. The application validates these credentials against the stored data in the database by comparing the provided password with the hashed password.
 
 ### Log In and Sign Up pages
-Like every design in Meetmate, we have chosen a simplified approach to ensure clarity, accessibility, and a smooth user experience. Emphasizing simplicity and usability, it features a clean, dark-themed design with blue accents for a professional yet straightforward look. This design encourages user focus during account creation and supports accurate data entry, minimizing errors.
+Like every design in Meetmate, we have chosen a simplified approach to ensure clarity, accessibility, and a smooth user experience. Emphasizing simplicity and usability, it features a clean, dark-themed design with blue accents for a professional yet straightforward look. This design encourages user focus during account creation and supports accurate data entry, minimizing errors. 
 
 ![[Example signup page]](../assets/oauth.png)
 
