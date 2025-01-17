@@ -70,6 +70,15 @@ public ResponseEntity<?> registerNewUser(@RequestParam MultiValueMap<String, Str
 ```
 For login, users navigate to the login page and enter their email and password credentials. The application validates these credentials against the stored data in the database by comparing the provided password with the hashed password.
 
+### Log In and Sign Up pages
+Like every design in Meetmate, we have chosen a simplified approach to ensure clarity,
+accessibility, and a smooth user experience. Emphasizing simplicity and usability, it features a
+clean, dark-themed design with blue accents for a professional yet straightforward look. This
+design encourages user focus during account creation and supports accurate data entry,
+minimizing errors.
+
+![[Example signup page]](../assets/oauth.png)
+
 ### Session Management
 
 Upon successful authentication, MeetMate generates JSON Web Tokens (JWTs) for session management. An access token and a refresh token are created and stored as HttpOnly cookies on the client-side. The access token is used for authenticating subsequent requests to the backend, while the refresh token is used to obtain a new access token when the current one expires.
@@ -150,7 +159,3 @@ const AdminDashboard = () => {
     );
 };
 ```
-
-### Error Handling /// This could be its own "feature" bit i dont know if its worth it because our error handling isnt that great
-
-The frontend application has a robust error handling system in place to prevent unnecessary requests and provide appropriate feedback to users in case of authentication or authorization errors. This may involve displaying user-friendly error messages, redirecting to appropriate pages, or implementing retry mechanisms.
