@@ -77,9 +77,7 @@ plugins:
       headless_included: false
 
 nav:
-  - Home:
-    - Start: index.md
-    - Introduction: introduction.md
+  - Introduction: index.md
 
   - Architecture: 
       - Project: architecture/project.md
@@ -110,12 +108,9 @@ nav:
     - Structure: 
       - Frontend: deployment/structure/frontend.md
       - Backend: deployment/structure/backend.md
-
-  - Legal Compliance: 
-      - Overview: legal-compliance/overview.md
-      - Privacy Policy: legal-compliance/privacy-policy.md
-      - Terms of Service: legal-compliance/terms-of-service.md
     
   - Future Enhancements: 
     - Company Enhancements: future-enhancements/company-enhancements.md
     - Further Verification: future-enhancements/further-verification.md
+
+  - Conclusion: conclusion.md
