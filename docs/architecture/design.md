@@ -1,4 +1,4 @@
-# **Design Architecture**
+# Design Architecture
 
 ### **Design Software and Tools**
 
