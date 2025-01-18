@@ -109,4 +109,8 @@ nav:
     - Company Enhancements: future-enhancements/company-enhancements.md
     - Further Verification: future-enhancements/further-verification.md
 
-  - Conclusion: conclusion.md
+  - Conclusion: 
+    - Project: conclusion/project.md
+    - Frontend: conclusion/frontend.md
+    - Backend: conclusion/backend.md
+    - Design: conclusion/design.md
