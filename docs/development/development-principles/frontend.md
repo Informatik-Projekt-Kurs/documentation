@@ -1,10 +1,10 @@
-# Frontend Development Principles
+# Frontend Development Methods
 
 ## Component Architecture
-Next.js and React use a component-based architecture where UI elements are broken down into reusable, isolated pieces. This approach enhances maintainability, reusability, and testing capabilities.
+[Next.js](https://nextjs.org) and [React](https://react.dev) use a component-based architecture where UI elements are broken down into reusable, isolated pieces. This approach improves maintainability, reusability, and testing capabilities. Testing in the frontend was not covered in this project, but the architecture is designed to support it.
 
 ### Server vs Client Components
-Next.js 13+ introduces a differentiation between server and client components:
+[Next.js 13+](https://nextjs.org/blog/next-13) introduces a differentiation between server and client components:
 
 - **Server Components:** <br>
   These are the default in the App Router. They render on the server, reduce client-side JavaScript, and can directly access backend resources:
@@ -25,7 +25,7 @@ Next.js 13+ introduces a differentiation between server and client components:
     import { useState, useEffect } from 'react'
     
     function InteractiveWidget() {
-        const [isOpen, setIsOpen] = useState(false)
+        const [isOpen, setIsOpen] = useState(false) // Values stored in browser
         // Client-side interactivity
     }
     ```
@@ -34,13 +34,15 @@ Next.js 13+ introduces a differentiation between server and client components:
 The application employs several strategies for efficient state management:
 
 ### Context-Based State Management
-React Contexts are extensively used to provide efficient data access and state management:
+[React](https://react.dev/) Contexts provide a way to share state across the component tree without explicitly passing props through each level (known as "prop drilling"). In our application, this is particularly useful for managing global state that multiple components need to access
+
+For example, our DashboardContext acts as a central hub that manages user data, company information, and appointments. It uses Apollo Client's hooks for data fetching and maintains local state:
 
 - **Centralized Data Management:** <br>
   Contexts like `CompanyContext` and `DashboardContext` handle complex data fetching and state management:
     ```ts
     // Dashboard context example showing centralized state management
-    type DashboardContextProps = {
+    type DashboardContextProps = { // Type definition
       user: ClientUser | undefined;
       loading: boolean;
       refreshUser: () => Promise<void>;
@@ -66,7 +68,7 @@ React Contexts are extensively used to provide efficient data access and state m
       // Unified loading state
       const loading = companiesLoading || userLoading || appointmentsLoading;
 
-      return (
+      return ( // Return values and functions
         <DashboardContext.Provider value={{
           user,
           loading,
@@ -97,8 +99,9 @@ React Contexts are extensively used to provide efficient data access and state m
     ```
 
 
-### Server Actions
-Next.js Server Actions are used extensively for secure server-side operations:
+### [Server Actions](https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations)
+Next.js Server Actions are functions that run on the server but can be called directly from client components. They provide a secure way to handle server-side operations like form submissions and data mutations without building separate API endpoints.
+Here's how they're implemented in our application:
 
 - **Type-Safe Form Handling:** <br>
   Server actions implement strong typing and validation:
@@ -185,12 +188,12 @@ Next.js Server Actions are used extensively for secure server-side operations:
     }
     ```
 
-## TypeScript Integration
+## [TypeScript](https://typescriptlang.org) Integration
 TypeScript is used throughout the application to ensure type safety and improve developer experience:
 
 ### Type Definitions
 - **Base Types and Unions:** <br>
-  Complex types are built using composition and union types for flexibility:
+  Complex types are built using composition and union types for flexibility. These types are shared across the application. In this example, user types are defined with a discriminated union, meaning the `role` property determines the specific user type. This makes it easier to work with different user roles and ensures type safety:
     ```ts
     // Base type that all users share
     type BaseUser = {
@@ -214,7 +217,7 @@ TypeScript is used throughout the application to ensure type safety and improve 
 
 ### Type Guards
 - **Runtime Type Checking:** <br>
-  Type guard functions enable safe type narrowing:
+  Type guard functions enable safe type narrowing, ensuring that the correct type is used at runtime, which is particularly useful when working with union types. Here, we define type guards for different user roles to check the `role` property:
     ```ts
     export function isClientUser(user: User): user is ClientUser {
       return user.role === Role.CLIENT;
@@ -251,7 +254,7 @@ TypeScript is used throughout the application to ensure type safety and improve 
 
 ### Core Data Types
 - **Application Data Models:** <br>
-  Business entities are modelled with extensive type definitions:
+  Business entities are modelled with extensive type definitions, ensuring data consistency and integrity. Here, we define types for companies and appointments:
     ```ts
     export type Company = {
       id: string;
@@ -285,12 +288,12 @@ TypeScript is used throughout the application to ensure type safety and improve 
     };
     ```
 
-This robust type system ensures code reliability, enables better IDE support, and catches potential errors at compile-time rather than runtime.
+This robust type system ensures code reliability, enables better IDE support, and catches potential errors at compile-time rather than runtime. It also improves code readability and maintainability.
 
 ## Tooling and Configuration
 
 ### ESLint Configuration
-[ESLint](https://eslint.org/) is used as the primary code quality tool in the frontend repository, performing static analysis to catch problems before they reach production. It enforces consistent coding standards across the entire codebase and integrates perfectly with TypeScript to provide type-aware linting.
+[ESLint](https://eslint.org/) is used as the primary code quality tool in the frontend repository, performing static analysis to catch problems before they reach production. It enforces consistent coding standards across the entire codebase and integrates perfectly with TypeScript to provide type-aware code linting.
 
 The ESLint configuration used here integrates multiple plugins:
  
@@ -332,7 +335,7 @@ The ESLint configuration used here integrates multiple plugins:
 
 ### Git Hooks and Commit Standards
 
-#### Husky Configuration
+#### [Husky](https://typicode.github.io/husky/) Configuration
 Husky is used to enforce code quality checks and commit message standards:
 
 - **Pre-commit Hook** (`/.husky/pre-commit`):
