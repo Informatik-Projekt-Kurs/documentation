@@ -249,9 +249,9 @@ TypeScript is used throughout the application to ensure type safety and improve 
     };
     ```
 
-### Domain Models
-- **Rich Domain Types:** <br>
-  Business entities are modeled with comprehensive type definitions:
+### Core Data Types
+- **Application Data Models:** <br>
+  Business entities are modelled with extensive type definitions:
     ```ts
     export type Company = {
       id: string;
@@ -285,4 +285,144 @@ TypeScript is used throughout the application to ensure type safety and improve 
     };
     ```
 
-This robust type system ensures code reliability, enables better IDE support, and catches potential errors at compile-time rather than runtime. The combination of discriminated unions, type guards, and generic type utilities provides a flexible yet type-safe foundation for the application.
+This robust type system ensures code reliability, enables better IDE support, and catches potential errors at compile-time rather than runtime.
+
+## Tooling and Configuration
+
+### ESLint Configuration
+[ESLint](https://eslint.org/) is used as the primary code quality tool in the frontend repository, performing static analysis to catch problems before they reach production. It enforces consistent coding standards across the entire codebase and integrates perfectly with TypeScript to provide type-aware linting.
+
+The ESLint configuration used here integrates multiple plugins:
+ 
+**Parser Configuration:**
+
+  - Uses `@typescript-eslint/parser` for TypeScript files
+  - Configured with project's `tsconfig.json` for type-aware linting
+
+**Plugin Integration:**
+
+  - TypeScript-specific rules via `@typescript-eslint`
+  - Next.js recommended configurations
+  - React-specific linting rules
+  - Tailwind CSS class validation
+
+**Key Rules:**
+  ```js
+  {
+    // Type Safety
+    "@typescript-eslint/strict-boolean-expressions": "error",
+    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/consistent-type-imports": ["warn"],
+
+    // Code Quality
+    "no-duplicate-imports": "error",
+    "no-unused-vars": "warn",
+    "prefer-const": "error",
+
+    // React Specific
+    "react/jsx-key": "error",
+    "react/jsx-no-target-blank": "error",
+    "react/hook-use-state": "error",
+
+    // Tailwind
+    "tailwindcss/classnames-order": "error",
+    "tailwindcss/no-contradicting-classname": "error"
+  }
+  ```
+
+### Git Hooks and Commit Standards
+
+#### Husky Configuration
+Husky is used to enforce code quality checks and commit message standards:
+
+- **Pre-commit Hook** (`/.husky/pre-commit`):
+  ```sh
+  #!/usr/bin/env sh
+  . "$(dirname -- "$0")/_/husky.sh"
+  npx lint-staged
+  npm run lint
+  ```
+
+- **Commit Message Hook** (`/.husky/commit-msg`):
+  ```sh
+  . "$(dirname -- "$0")/_/husky.sh"
+  npx commitlint --edit
+  ```
+
+The pre-commit process works in two stages:
+
+- **Staged Files Check** (`lint-staged`):
+    - Only runs on files staged in Git
+    - Applies ESLint fixes and Prettier formatting
+    - Fast and focused on changed files
+
+- **Full Project Lint** (`next lint`):
+    - Runs the Next.js linter across the entire codebase
+    - Checks for:
+        - ESLint rule violations
+        - Import/export errors
+        - React hooks usage
+        - Dead code and unused exports
+    - Ensures global code quality, not just changed files
+
+#### Commit Linting
+The project also enforces consistent commit messages using [commitlint](https://github.com/conventional-changelog/commitlint):
+
+- Follows conventional commit format: `type(scope): message`
+- Types include: feat, fix, docs, style, refactor, test, chore
+- Scope is optional and describes the section of the codebase
+- Message should be in present tense and descriptive
+
+Example valid commits:
+```
+feat(auth): add OAuth2 integration
+fix(dashboard): resolve data loading issue
+docs(api): update endpoint documentation
+```
+
+## Continuous Integration
+
+### GitHub Actions Workflow
+The CI pipeline is configured to run on pull requests and pushes to all branches:
+
+```yaml
+name: CI
+on:
+  pull_request:
+    branches: ["*"]
+  push:
+    branches: ["*"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create env file
+        run: |
+          touch .env
+          echo JWT_SECRET="mysecretvalue" >> .env
+          # Additional environment variables...
+
+      - name: Build project
+        run: npm run build
+
+      - name: Lint project
+        run: npm run lint
+```
+
+Key Features:
+
+- Sets up required environment variables
+- Performs full build and lint checks
+- Fails fast on any issues
