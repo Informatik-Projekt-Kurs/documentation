@@ -81,17 +81,17 @@ nav:
 
   - Architecture: 
       - Project: architecture/project.md
-      - Frontend: architecture/frontend.md.md
+      - Frontend: architecture/frontend.md
       - Backend: architecture/backend.md
       - Design: architecture/design.md
 
   - Development: 
     - Structure: 
-      - Frontend: development/structure/frontend.md.md
+      - Frontend: development/structure/frontend.md
       - Backend: development/structure/backend.md
       - Design: development/structure/design.md
     - Development principles: 
-      - Frontend: development/development-principles/frontend.md.md
+      - Frontend: development/development-principles/frontend.md
       - Backend: development/development-principles/backend.md
       - Design: development/development-principles/design.md
 
