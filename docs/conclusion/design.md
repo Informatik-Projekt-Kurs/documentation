@@ -1,6 +1,6 @@
 # Design 
 ## Role
-As the designer on this project, I was responsible for creating user interfaces, designing prototypes, and ensuring a good user experience.
+As the designer of this project, I was responsible for creating user interfaces, designing prototypes, and ensuring a good user experience.
 This role gave me many opportunities to grow professionally through new challenges, tools, and team collaboration.
 
 ## Tools and learning journey
