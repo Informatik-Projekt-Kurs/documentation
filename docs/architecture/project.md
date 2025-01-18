@@ -1,6 +1,6 @@
 # Architecture Overview
 
-This section delves into the architectural framework of MeetMate, outlining the key components and technologies that drive our application. It outlines the key components and technologies that drive our application. 
+This section dives into the architectural framework of MeetMate, outlining the key components and technologies that drive our application. It outlines the key components and technologies that drive our application. 
 
 ## **Overall System Architecture**
 
@@ -34,5 +34,7 @@ We use Confluence to save data-structures, integration of frontend and backend, 
 
 - **Cloud Services:** Utilizing cloud platforms for hosting, data storage, and scalability.
 - **CI/CD Pipeline:** Continuous integration and continuous deployment practices for streamlined and efficient release cycles.
+
+For hosting the API and databases of the backend in one place, we use DigitalOcean, while the frontend website runs on Netlify.
 
 > **Note**: This structure provides a comprehensive overview of the application architecture, detailing the tools, technologies, and methodologies used in the development of MeetMate. It's designed to be informative for both technical and non-technical users, ensuring a clear understanding of the application's infrastructure.

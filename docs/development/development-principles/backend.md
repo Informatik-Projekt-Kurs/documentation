@@ -1,7 +1,7 @@
 # Backend Development Principles
 
 ## Annotations
-Spring Boot's main gimmick is its use of annotations. With them, one can configure different elements of the code in a single, easily readable statement, right at the start of a class or method. These annotations eliminate the need for extensive configuration, streamlining the setup process and making the codebase more intuitive. This declarative style not only enhances clarity but also reduces boilerplate code, allowing developers to focus more on building functionality rather than configuring the framework. Complementing Spring Boots funtionality of annotations is a small dependency called Lombok. By itself it cuts down on repetetive code segments to clear up and simplify the development process.
+What makeas Spring Boot unique is its use of annotations. With them, one can configure different elements of the code in a single, easily readable statement, right at the start of a class or method. These annotations eliminate the need for extensive configuration, streamlining the setup process and making the codebase more intuitive. This declarative style not only enhances clarity but also reduces boilerplate code, allowing developers to focus more on building functionality rather than configuring the framework. Complementing Spring Boots funtionality of annotations is a small dependency called Lombok. By itself it cuts down on repetetive code segments to clear up and simplify the development process.
 
 ### Method Annotations
 A few examples for method specific annotations are:
@@ -55,7 +55,13 @@ Alongside method annotations there are also class assigned ones, which will give
     In both cases, annotations provide a clear way to map classes to their corresponding storage structures, whether they are relational tables or NoSQL collections.
 
 ### Field Annotations
-blablabla - RequestHeader maybe @Nullable?
+Not only methods and classes can benefit from annotations. For instance, declaring fields with annotations can help restrict their values, reducing the need for checks in elswhere in the code. A great example of this is the `@NonNull` annotation, which ensures null safety. When applied to any non-primitive field, it triggers a NullPointerException if the field ever holds a null value. Other usecases might be the `@Argument` annotation, used to tell Spring that this field is an argument passed in by a GraphQL request. An implementation might look like this:
+```java
+@QueryMapping
+  public Company getCompany(@Argument Long id) {
+      return companyService.getCompany(id);
+  }
+```
 
 
 ## Dependency Injection
