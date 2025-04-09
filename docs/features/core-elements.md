@@ -59,7 +59,7 @@ export function DashboardProvider({ children }: { children: React.ReactNode }) {
 
 Finding a fitting design for the users dashboard plays a major role in enhancing their experience when scheduling appointments. We made it simple to use so everyone can understand it quickly. When users first see the dashboard, they can find what they need without getting confused. We removed complex features and kept only the important tools that help users manage their time well.
 
-![[Overview Scheduler presented on the Client Dashboard]](../../assets/dashboard-overview-scheduler.png)
+![[Overview Scheduler presented on the Client Dashboard]](../assets/dashboard-overview-scheduler.png)
 
 The main part of our dashboard is the calendar. We use bright colors like magenta, yellow, and purple to show different appointments. These colors help users in two ways:
 First, users can see what type of appointment they have without reading all the details. Second, when users look for a specific appointment, they can find it by looking for its color instead of reading through many appointment names.

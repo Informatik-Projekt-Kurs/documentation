@@ -8,7 +8,7 @@ While there is a general idea backend already has an implementation in place, th
 #### Company Member Onboarding
 To clarify the onboarding process for company members, a specialized flow was designed. The process begins with an invite link, typically sent by the company administrator. When clicked, the link directs the new member to a dedicated page where they can create their password and access the company’s MeetMate account. Once registered, the new member can quickly join the platform and collaborate with their team.
 
-![[Flowchart Picture]](../../assets/member-start.png)
+![[Flowchart Picture]](../assets/member-start.png)
 
 #### Members in the Backend
 Meanwhile the backend implementation considers the company owner as an administrator, in of fully setting up and managing the employees. This system, while fully functional, currently sees no use and may require adjustments to better align with the evolving project. The backend enforces authorisation checks to allowing company members to perform editing tasks similar to the owner while restricting access to critical company settings.

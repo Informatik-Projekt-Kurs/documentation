@@ -46,8 +46,6 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
-copyright: |
-  &copy; 2024 <a href="https://github.com/Informatik-Projekt-Kurs"  target="_blank" rel="noopener">MeetMate</a>
 extra:
   analytics:
     provider: google
@@ -69,6 +67,13 @@ extra:
 
 plugins:
   - search
+  - to-pdf:
+      cover: true
+      cover_title: MeetMate
+      cover_subtitle: Documentation
+      cover_logo: assets/logo.png
+      author: Informatik Projekt Kurs 2023-2025
+      copyright: Copyright © 2025 Informatik Projekt Kurs Gymnasium St. Mauritz
   - mkdocs-nav-weight:
       section_renamed: false
       index_weight: -10
@@ -114,3 +119,8 @@ nav:
     - Frontend: conclusion/frontend.md
     - Backend: conclusion/backend.md
     - Design: conclusion/design.md
+
+  - Post-Project Optimizations:
+    - Overview: post-project/overview.md
+    - Performance: post-project/performance.md
+    - Dependency Modernization: post-project/dependency-modernization.md

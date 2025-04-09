@@ -20,6 +20,7 @@ app/
 ```
 
 Each route is carefully structured to handle specific business needs. For example, our [company setup wizard](https://meetmate.dev/company/setup) guides new businesses through a 4-step process:
+
 1. Company Name
 2. CEOs Email
 3. CEOs Name
@@ -38,6 +39,7 @@ components/
 ```
 
 Each component is designed for reusability and follows our design system. For example, our `Scheduler` and `OverviewScheduler` components handle:
+
 - Automatic time display based on the user's booked appointments
 - Week selection
 - Dialogs for appointment management
