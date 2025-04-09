@@ -24,6 +24,7 @@ jobs:
       - run: pip install mkdocs-material
       - run: pip install mkdocs-nav-weight
       - run: pip install pillow cairosvg
+      - run: pip install mkdocs-to-pdf
 
       # Build the site
       - run: mkdocs build
